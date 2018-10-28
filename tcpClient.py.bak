@@ -13,7 +13,7 @@ def Main():
     s.connect((host, port))
 
     #enterting the message that is to be sent
-    msg = input("Enter the message: ")
+    msg = raw_input("Enter the message: ")
 
     #loop
     while msg != 'bye':
@@ -23,10 +23,10 @@ def Main():
 
         #receiving the message
         data = s.recv(1024)
-        print("Message found: " + str(data))
+        print "Message found: " + str(data)
 
         #sending the reply
-        msg = input("Enter the message: ")
+        msg = raw_input("Enter the message: ")
 
     s.close()
 
