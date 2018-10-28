@@ -21,7 +21,7 @@ def Main():
     #accepting the connection
     c, add = s.accept()
 
-    print("Connection Found: " + str(add))
+    print "Connection Found: " + str(add)
 
     while True:
         data = c.recv(1024)
@@ -29,11 +29,11 @@ def Main():
         file1.write("Client: " + str(data) + "\n")
         if not data:
             break
-        print("Message found:" + "\n" + str(data))
+        print "Message found:" + "\n" + str(data)
 
-        data = input("Enter the message: ")
+        data = raw_input("Enter the message: ")
 
-        print("Sending... " + "\n" + str(data))
+        print "Sending... " + "\n" + str(data)
 
         c.send(data)
 
